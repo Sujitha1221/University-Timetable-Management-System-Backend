@@ -1,0 +1,1465 @@
+{
+    "info": {
+        "_postman_id": "17dc14d7-79b3-4cab-8575-507d28f4feb4",
+        "name": "Application Frameworks",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "25673769"
+    },
+    "item": [
+        {
+            "name": "admin",
+            "item": [
+                {
+                    "name": "get all admins",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true,
+                        "followOriginalHttpMethod": true,
+                        "followRedirects": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTIwMDUxNCwiZXhwIjoxNzQyNzU4MTE0fQ.z6Q9pS6jSWtNy9k0n5TIJEk9_dBLfim2BlZ7zLqLx4Q",
+                                "description": "Admin",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "admin login",
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "exec": [
+                                    ""
+                                ],
+                                "type": "text/javascript",
+                                "packages": {}
+                            }
+                        }
+                    ],
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"email\":\"John12@gmail.com\", \"password\" :\"Johndoe12\"}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete admin",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE2MjEyMSwiZXhwIjoxNzQyNzE5NzIxfQ.7Spiuf_K02OFM5esU60C7Vnu24iXG_EVJDHWzGz8qJw",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins/A1005",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins",
+                                "A1005"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update admin",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTIwMDUxNCwiZXhwIjoxNzQyNzU4MTE0fQ.z6Q9pS6jSWtNy9k0n5TIJEk9_dBLfim2BlZ7zLqLx4Q",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"John12@gmail.com\",\r\n  \"address\": \"12, Ellie House Road, Modara\",\r\n  \"phone\": 777653425,\r\n  \"password\": \"Johndoe12\",\r\n  \"dob\": \"2001-09-12\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins/A1000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins",
+                                "A1000"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "admin register",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n      \"firstName\": \"Kaya\",\r\n      \"lastName\": \"Mary\",\r\n      \"email\": \"KayaMary@example.com\",\r\n      \"address\": \"123 Main St\",\r\n      \"phone\": \"779362829\",\r\n      \"password\": \"Test123!@#\",\r\n      \"dob\": \"1990-01-01\"\r\n    }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins",
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getOneAdmin",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTIwMDUxNCwiZXhwIjoxNzQyNzU4MTE0fQ.z6Q9pS6jSWtNy9k0n5TIJEk9_dBLfim2BlZ7zLqLx4Q",
+                                "description": "Admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/admins/A1002",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "admins",
+                                "A1002"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "faculty",
+            "item": [
+                {
+                    "name": "faculties register",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTA4NjQxMzgsImV4cCI6MTcxMDg2NTAzOH0.Oe4YbQl3npcg9zwTNpmJiyWGrktbzXG7HEMoIM405nU",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"firstName\": \"Alwin\",\r\n  \"lastName\": \"Chipmunk\",\r\n  \"email\": \"Alwin467@gmail.com\",\r\n  \"address\": \"  1st Floor, Madavee Building, Galle\",\r\n  \"phone\": 774567845,\r\n  \"password\": \"Chipmunk467\",\r\n  \"dob\": \"1988-06-23\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties",
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "faculties login",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"email\":\"Bush2000@gmail.com\", \"password\":\"Desmond2000\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "all faculties",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true,
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3Mzc1NCwiZXhwIjoxNzQyNzMxMzU0fQ.EgtJM6Jd_o9fhOCObIAQKGZq6ASkkaP_GxPR_v9mOcU",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getOneFaculty",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTEyMDEwNTgsImV4cCI6MTcxMTIwMTk1OH0.p33fPG0kJI7kgJ5hs19aj3KIDdUqIDOxKlYUhbijNCs",
+                                "description": "faculty",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties/F1000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties",
+                                "F1000"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "updateFaculty",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTEyMDEwNTgsImV4cCI6MTcxMTIwMTk1OH0.p33fPG0kJI7kgJ5hs19aj3KIDdUqIDOxKlYUhbijNCs",
+                                "description": "faculty",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"firstName\": \"Desmond\",\r\n  \"lastName\": \"Bush\",\r\n  \"email\": \"Bush2000@gmail.com\",\r\n  \"address\": \"  1st Floor, Madavee Building, Galle\",\r\n  \"phone\": 7745788745,\r\n  \"password\": \"Desmond2000\",\r\n  \"dob\": \"1988-06-23\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties/F1002",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties",
+                                "F1002"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete faculty",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3Mzc1NCwiZXhwIjoxNzQyNzMxMzU0fQ.EgtJM6Jd_o9fhOCObIAQKGZq6ASkkaP_GxPR_v9mOcU",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/faculties/F1003",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "faculties",
+                                "F1003"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "student",
+            "item": [
+                {
+                    "name": "students register",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAyIiwiZW1haWwiOiJDb2xsaW5zMTNAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg3ZjJlNGZhMDg2MWMwZDZiZDgifSwiaWF0IjoxNzEwODY0NjYxLCJleHAiOjE3MTA4NjU1NjF9.LxTpdLWjg_CAnP45FCuUfPxED_v_TEeZ3MF__6h4ZJM",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"firstName\": \"Dharane\",\r\n  \"lastName\": \"Segar\",\r\n  \"email\": \"Dharanes8@gmail.com\",\r\n  \"address\": \"8, Ellie House Road,Colombo\",\r\n  \"phone\": 778392546,\r\n  \"password\": \"Dharanes8\",\r\n  \"dob\": \"2002-01-08\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/students/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students",
+                                "register"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "students login",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": " { \"email\":\"Ross34@gmail.com\", \"password\" :\"Alexia34\"}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/students/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getAllStudents",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3NjQ3MCwiZXhwIjoxNzQyNzM0MDcwfQ.a74nGlAUa7qX2MqwMv3saw33qMfDLHCxJ9GXihUnBPc",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/students",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "getOneStudent",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAwIiwiZW1haWwiOiJCcmFuZHQ4OEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliN2ZlMmU0ZmEwODYxYzBkNmJkMCJ9LCJpYXQiOjE3MTEyMDE0NDksImV4cCI6MTcxMTIwMjM0OX0.myQZdNtd8YbqGYC7Rwaz3_uilNAe0gckIpBXPR4v9EE",
+                                "description": "student",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/students/S1000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students",
+                                "S1000"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "updateStudent",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAwIiwiZW1haWwiOiJCcmFuZHQ4OEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliN2ZlMmU0ZmEwODYxYzBkNmJkMCJ9LCJpYXQiOjE3MTEyMDE0NDksImV4cCI6MTcxMTIwMjM0OX0.myQZdNtd8YbqGYC7Rwaz3_uilNAe0gckIpBXPR4v9EE",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"firstName\": \"Clarissa\",\r\n  \"lastName\": \"Brandt\",\r\n  \"email\": \"Brandt88@gmail.com\",\r\n  \"address\": \"203 Union Place, Colombo\",\r\n  \"phone\": 776896543,\r\n  \"password\": \"Clarissa889\",\r\n  \"dob\": \"2002-09-21\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/students/S1000",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students",
+                                "S1000"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete student",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3NzIzMSwiZXhwIjoxNzQyNzM0ODMxfQ.jFGtPA3CU3yAfxw8AfJpRkDwS5IlPtfeY_vW-PSHY-I",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/students/S1003",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "students",
+                                "S1003"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "room",
+            "item": [
+                {
+                    "name": "get All Rooms",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODAyMywiZXhwIjoxNzQyNzM1NjIzfQ.e7G_ba__VZYDBPx6_B4fPucYEhPXYmQugNqUCWo53N8",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/rooms",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "rooms"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "room creation",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODAyMywiZXhwIjoxNzQyNzM1NjIzfQ.e7G_ba__VZYDBPx6_B4fPucYEhPXYmQugNqUCWo53N8",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"floorNo\": \"5\",\r\n  \"building\": \"Business School\",\r\n  \"name\": \"Lecture Hall\",\r\n  \"capacity\": 100,\r\n  \"resources\": [\"Projectors\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/rooms",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "rooms"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update room",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODAyMywiZXhwIjoxNzQyNzM1NjIzfQ.e7G_ba__VZYDBPx6_B4fPucYEhPXYmQugNqUCWo53N8",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"floorNo\": \"5\",\r\n  \"building\": \"Business School\",\r\n  \"name\": \"Lecture Hall with high seat capacity\",\r\n  \"capacity\": 100,\r\n  \"resources\": [\"Projectors\",\"books\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/rooms/R1003",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "rooms",
+                                "R1003"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete room",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODAyMywiZXhwIjoxNzQyNzM1NjIzfQ.e7G_ba__VZYDBPx6_B4fPucYEhPXYmQugNqUCWo53N8",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/rooms/R1003",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "rooms",
+                                "R1003"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "course",
+            "item": [
+                {
+                    "name": "course creation",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODg0NiwiZXhwIjoxNzQyNzM2NDQ2fQ.psQQjFYh7N_LuqAGA8iLJQWBNcBMLeoa9l0K4kVkvVY",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"courseCode\": \"IT3110\",\r\n  \"name\": \"Industry Placement\",\r\n  \"description\": \"Internship is mandatory for all specialisations and the duration should be 6 months at a stretch in one company.\",\r\n  \"credits\": 12,\r\n  \"faculties\": [\"F1000\", \"F1002\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/courses",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "courses"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "all courses",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODg0NiwiZXhwIjoxNzQyNzM2NDQ2fQ.psQQjFYh7N_LuqAGA8iLJQWBNcBMLeoa9l0K4kVkvVY",
+                                "type": "text",
+                                "disabled": true
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/courses",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "courses"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update course",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODg0NiwiZXhwIjoxNzQyNzM2NDQ2fQ.psQQjFYh7N_LuqAGA8iLJQWBNcBMLeoa9l0K4kVkvVY",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"courseCode\": \"IT3110\",\r\n  \"name\": \"Industry Placement\",\r\n  \"description\": \"Internship is mandatory for all specialisations and the duration should be 6 months at a stretch in one company.\",\r\n  \"credits\": 12,\r\n  \"faculties\": [\"F1000\", \"F1002\"]\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/courses/IT3110",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "courses",
+                                "IT3110"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "course deletion",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3ODg0NiwiZXhwIjoxNzQyNzM2NDQ2fQ.psQQjFYh7N_LuqAGA8iLJQWBNcBMLeoa9l0K4kVkvVY",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/courses/IT3110",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "courses",
+                                "IT3110"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "faculty courses",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTEyMDIxMTMsImV4cCI6MTcxMTIwMzAxM30.rNIG716hctCHUGy7rBQrcijK50x6EsP8zFNoGB6Ge8k",
+                                "description": "faculty",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/courses/faculty-courses",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "courses",
+                                "faculty-courses"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "booking",
+            "item": [
+                {
+                    "name": "booking creation",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3OTkyOCwiZXhwIjoxNzQyNzM3NTI4fQ.i_If6METpT2y0t2OwRMbOxF_3UuFE-jS1oY73WihDlU",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"roomId\": \"R1000\",\r\n  \"courseId\": \"HIST201\",\r\n  \"dayOfWeek\": 4,\r\n  \"startTime\": {\r\n    \"hours\": 14,\r\n    \"minutes\": 0\r\n  },\r\n  \"endTime\": {\r\n    \"hours\": 17,\r\n    \"minutes\": 0\r\n  }\r\n}\r\n\r\n\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/bookings",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "bookings"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "all bookings",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3OTkyOCwiZXhwIjoxNzQyNzM3NTI4fQ.i_If6METpT2y0t2OwRMbOxF_3UuFE-jS1oY73WihDlU",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/bookings",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "bookings"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update booking",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3OTkyOCwiZXhwIjoxNzQyNzM3NTI4fQ.i_If6METpT2y0t2OwRMbOxF_3UuFE-jS1oY73WihDlU",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"roomId\": \"R1000\",\r\n  \"courseId\": \"HIST201\",\r\n  \"dayOfWeek\": 4,\r\n  \"startTime\": {\r\n    \"hours\": 14,\r\n    \"minutes\": 0\r\n  },\r\n  \"endTime\": {\r\n    \"hours\": 16,\r\n    \"minutes\": 0\r\n  }\r\n}\r\n\r\n\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/bookings/65fedf844ba68089bc12cd59",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "bookings",
+                                "65fedf844ba68089bc12cd59"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete booking",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE3OTkyOCwiZXhwIjoxNzQyNzM3NTI4fQ.i_If6METpT2y0t2OwRMbOxF_3UuFE-jS1oY73WihDlU",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/bookings/65fedf844ba68089bc12cd59",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "bookings",
+                                "65fedf844ba68089bc12cd59"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "student enrollments",
+            "item": [
+                {
+                    "name": "enrollment creation",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAxIiwiZW1haWwiOiJSb3NzMzRAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg0NDJlNGZhMDg2MWMwZDZiZDQifSwiaWF0IjoxNzExMjAyNTMzLCJleHAiOjE3MTEyMDM0MzN9.Sg8ZwU8ctnks1tBEc5TdEFOzvKLl00e9RviqciToPH0",
+                                "type": "text",
+                                "description": "student"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{ \"courseId\":\"MATH202\" }",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/enrolments",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "enrolments"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "get all enrollments",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE4MTYxOCwiZXhwIjoxNzQyNzM5MjE4fQ.1dY9PzrYjjTzATAKcKChW7VEzJ16kX8sy-3SzEOkIAc",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/enrolments",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "enrolments"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "get student enrollments",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAxIiwiZW1haWwiOiJSb3NzMzRAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg0NDJlNGZhMDg2MWMwZDZiZDQifSwiaWF0IjoxNzExMjAyNTMzLCJleHAiOjE3MTEyMDM0MzN9.Sg8ZwU8ctnks1tBEc5TdEFOzvKLl00e9RviqciToPH0",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/enrolments/students",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "enrolments",
+                                "students"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "timetable",
+            "item": [
+                {
+                    "name": "timetable creation",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE4NDAzOSwiZXhwIjoxNzQyNzQxNjM5fQ.vwJuVv-DECg9RmzY0GfoFa_LKzYeFRmRXa8cV8Msqok",
+                                "type": "text",
+                                "description": "admin"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"courseId\": \"COMP101\",\r\n  \"dayOfWeek\": 1,\r\n  \"startTime\": {\r\n    \"hours\": 9,\r\n    \"minutes\": 0\r\n  },\r\n  \"endTime\": {\r\n    \"hours\": 11,\r\n    \"minutes\": 0\r\n  },\r\n  \"faculty\": \"F1002\",\r\n  \"location\": \"R1000\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "get all timetables",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE4NDAzOSwiZXhwIjoxNzQyNzQxNjM5fQ.vwJuVv-DECg9RmzY0GfoFa_LKzYeFRmRXa8cV8Msqok",
+                                "description": "admin",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "update time table",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE4NDAzOSwiZXhwIjoxNzQyNzQxNjM5fQ.vwJuVv-DECg9RmzY0GfoFa_LKzYeFRmRXa8cV8Msqok",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"courseId\": \"ENG101\",\r\n  \"dayOfWeek\": 5,\r\n  \"startTime\": {\r\n    \"hours\": 10,\r\n    \"minutes\": 0\r\n  },\r\n  \"endTime\": {\r\n    \"hours\": 13,\r\n    \"minutes\": 0\r\n  },\r\n  \"faculty\": \"F1002\",\r\n  \"location\": \"R1002\"\r\n}\r\n",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables/65f9c77ca252823170e217b9",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables",
+                                "65f9c77ca252823170e217b9"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "student timetables",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAxIiwiZW1haWwiOiJSb3NzMzRAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg0NDJlNGZhMDg2MWMwZDZiZDQifSwiaWF0IjoxNzExMjAyNTMzLCJleHAiOjE3MTEyMDM0MzN9.Sg8ZwU8ctnks1tBEc5TdEFOzvKLl00e9RviqciToPH0",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables/students",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables",
+                                "students"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "delete timetable",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTE4NDAzOSwiZXhwIjoxNzQyNzQxNjM5fQ.vwJuVv-DECg9RmzY0GfoFa_LKzYeFRmRXa8cV8Msqok",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables/65fee150739719936a4fa561",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables",
+                                "65fee150739719936a4fa561"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "faculty time tables",
+                    "protocolProfileBehavior": {
+                        "followOriginalHttpMethod": true
+                    },
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTEyMDIxMTMsImV4cCI6MTcxMTIwMzAxM30.rNIG716hctCHUGy7rBQrcijK50x6EsP8zFNoGB6Ge8k",
+                                "description": "faculty",
+                                "type": "text"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8090/api/timetables/faculties",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "timetables",
+                                "faculties"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "notification",
+            "item": [
+                {
+                    "name": "send notification",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"recipient\":\"S1002\",\r\n    \"message\":\"mid semester timetable released\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:8090/api/notifications/notification",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8090",
+                            "path": [
+                                "api",
+                                "notifications",
+                                "notification"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}

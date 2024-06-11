@@ -1,0 +1,36 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/rooms"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            floorNo: 1
+            building: "Main Building"
+            name: "Room 101"
+            capacity: 50
+            resources: ["Projector", "Whiteboard"]
+      - get:
+          url: "/api/rooms"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+      - put:
+          url: "/api/rooms/R1004"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            floorNo: 2
+            building: "New Building"
+            name: "Updated Room 101"
+            capacity: 60
+            resources: ["Projector", "Whiteboard", "Microphone"]
+      - delete:
+          url: "/api/rooms/R1004"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"

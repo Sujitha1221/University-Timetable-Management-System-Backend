@@ -1,0 +1,49 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60 
+      arrivalRate: 10 
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/students/register" 
+          json:
+            firstName: "Alice"
+            lastName: "Huerta"
+            email: "Huerta56@gmail.com"
+            password: "Huerta56#"
+            address: "123 Main St, Pettah"
+            phone: "778203536"
+            dob: "1998-01-01" 
+      - post:
+          url: "/api/students/login" 
+          json:
+            email: "Huerta56@gmail.com"
+            password: "Huerta56#"
+          capture:
+            as: "token" 
+            json: $.token 
+      - get:
+          url: "/api/students" 
+          headers:
+            Authorization: "Bearer {{ token }}" 
+      - get:
+          url: "/api/students/S1004" 
+          headers:
+            Authorization: "Bearer {{ token }}" 
+      - put:
+          url: "/api/students/S1004" 
+            firstName: "Alice"
+            lastName: "Huerta"
+            email: "Huerta56@gmail.com"
+            password: "Huerta56#"
+            address: "123 Main St, Pettah"
+            phone: "778203536"
+            dob: "2000-01-01"
+          headers:
+            Authorization: "Bearer {{ token }}" 
+      - delete:
+          url: "/api/students/S1004"
+          headers:
+            Authorization: "Bearer {{ token }}" 

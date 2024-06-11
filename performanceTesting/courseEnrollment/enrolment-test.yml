@@ -1,0 +1,22 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/enrolments"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAxIiwiZW1haWwiOiJSb3NzMzRAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg0NDJlNGZhMDg2MWMwZDZiZDQifSwiaWF0IjoxNzExMjUzNDQzLCJleHAiOjE3MTEyNTQzNDN9.mSb-4pEXaKRt7MVYkilOlycAEhtRCHPavLnIDL61pbE"
+          json:
+            courseId: "CSE101"
+      - get:
+          url: "/api/enrolments"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+      - get:
+          url: "/api/enrolments/S1002"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InN0dWRlbnRJZCI6IlMxMDAxIiwiZW1haWwiOiJSb3NzMzRAZ21haWwuY29tIiwiaWQiOiI2NWY5Yjg0NDJlNGZhMDg2MWMwZDZiZDQifSwiaWF0IjoxNzExMjUzNDQzLCJleHAiOjE3MTEyNTQzNDN9.mSb-4pEXaKRt7MVYkilOlycAEhtRCHPavLnIDL61pbE"

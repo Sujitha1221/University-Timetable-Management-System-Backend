@@ -1,0 +1,50 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/admins/register"
+          json:
+            firstName: "Isabela"
+            lastName: "Townsend"
+            email: "Townsend@example.com"
+            address: "789 albert St, Dehiwala"
+            phone: "777654321"
+            password: "Townsend678"
+            dob: "1970-01-01"
+      - post:
+          url: "/api/admins/login"
+          json:
+            email: "Townsend@example.com"
+            password: "Townsend678"
+          capture:
+            as: "token"
+            json: $.token
+      - get:
+          url: "/api/admins"
+          headers:
+            Authorization: "Bearer {{ token }}"
+      - get:
+          url: "/api/admins/A1004"
+          headers:
+            Authorization: "Bearer {{ token }}"
+      - put:
+          url: "/api/admins/1004"
+          json:
+            firstName: "Isabela"
+            lastName: "Townsend"
+            email: "Townsend@example.com"
+            address: "789 albert St, Dehiwala"
+            phone: "777654321"
+            password: "Townsend678"
+            dob: "1970-01-01"
+          headers:
+            Authorization: "Bearer {{ token }}"
+      - delete:
+          url: "/api/admins/1004"
+          headers:
+            Authorization: "Bearer {{ token }}"

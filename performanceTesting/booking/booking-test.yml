@@ -1,0 +1,44 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/bookings"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            roomId: "R1004"
+            courseId: "COMP101"
+            dayOfWeek: 1
+            startTime:
+              hours: 9
+              minutes: 0
+            endTime:
+              hours: 11
+              minutes: 0
+      - get:
+          url: "/api/bookings"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+      - put:
+          url: "/api/bookings/65fc6b64715eafaddb2b7b40"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            roomId: "R1004"
+            courseId: "COMP101"
+            dayOfWeek: 2
+            startTime:
+              hours: 10
+              minutes: 0
+            endTime:
+              hours: 12
+              minutes: 0
+      - delete:
+          url: "/api/bookings/65fc6b64715eafaddb2b7b40"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"

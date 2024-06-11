@@ -1,0 +1,39 @@
+config:
+  target: "http://localhost:8090"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+scenarios:
+  - flow:
+      - post:
+          url: "/api/courses"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            courseCode: "CSE101"
+            name: "Introduction to Computer Science"
+            description: "An introductory course to computer science"
+            credits: 3
+            faculties: ["F1000", "F1001"]
+      - get:
+          url: "/api/courses"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+      - get:
+          url: "/api/courses/faculty-courses"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZhY3VsdHlJZCI6IkYxMDAyIiwiZW1haWwiOiJCdXNoMjAwMEBnbWFpbC5jb20iLCJpZCI6IjY1ZjliNjkwMmU0ZmEwODYxYzBkNmJjNiJ9LCJpYXQiOjE3MTEyNTM0NjYsImV4cCI6MTcxMTI1NDM2Nn0.8ye7S7SwVzcn7xoM5Yyo__WrORMPjzyR69UPlqyfqR4"
+      - put:
+          url: "/api/courses/CSE101"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
+          json:
+            name: "Intro to CS"
+            description: "Updated course description"
+            credits: 4
+            faculties: ["F1002"]
+      - delete:
+          url: "/api/courses/CSE101"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImFkbWluSWQiOiJBMTAwMCIsImVtYWlsIjoiSm9objEyQGdtYWlsLmNvbSIsImlkIjoiNjVmOWIyZTA3MDQ5YjE3OTY3ZjdkNTE2In0sImlhdCI6MTcxMTI1MzIwNywiZXhwIjoxNzQyODEwODA3fQ.i2n3A5PD31zI7fwVNbiL1TDdM3Yu22M3UvU61lM2DDQ"
